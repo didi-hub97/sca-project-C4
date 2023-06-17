@@ -10,7 +10,7 @@ jobs:
       CLUSTER_NAME: sca-cluster
       CLUSTER_NAME_STAG: sca-stag
       CLOUDSDK_COMPUTE_ZONE: us-west4-a 
-      CONTAINER_NAME: hungry_solomon
+      CONTAINER_NAME: sca-container
       IMAGE: sca-image
       REG_ID: sca
       REG_ID_PROD: sca-prod
