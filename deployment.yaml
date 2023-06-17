@@ -1,39 +1,39 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ci-cd
+  name: sca-image
   labels:
-    app: ci-cd
+    app: sca-image
 spec:
   ports:
     - port: 3000
   selector:
-    app: ci-cd
+    app: sca-image
     tier: frontend
   type: LoadBalancer
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ci-cd
+  name: sca-image
   labels:
-    app: ci-cd
+    app: sca-image
 spec:
   selector:
     matchLabels:
-      app: ci-cd
+      app: sca-image
       tier: frontend
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: ci-cd
+        app: sca-image
         tier: frontend
     spec:
       containers:
-      - image: gcr.io/sca-project-todo/ci-cd:0.1.0
-        name: ci-cd
+      - image: gcr.io/sca-project-389601/sca-image:0.1.0
+        name: sca-image
         ports:
         - containerPort: 3000
-          name: ci-cd
+          name: sca-image

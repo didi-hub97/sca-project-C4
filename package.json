@@ -1,10 +1,10 @@
 {
-    "name": "gcloud-deploy-node-app-ci-ci-circleci",
+    "name": "dockerized nodejs application",
     "version": "1.0.0",
-    "description": "Learning how to deploy a simple Node.js app to gcloud",
+    "description": "This is a basic guide on dockerizing a node.js app, deploying to gcloud and setting a CI/CD.",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js",
+        "start": "nodemon",
         "test": "mocha"
     },
     "keywords": [
@@ -16,7 +16,8 @@
     "dependencies": {
         "body-parser": "^1.17.2",
         "express": "^4.15.3",
-        "morgan": "^1.8.2"
+        "morgan": "^1.8.2",
+        "nodemon": "^2.0.22"
     },
     "devDependencies": {
         "chai": "^4.1.2",
