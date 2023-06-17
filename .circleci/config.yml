@@ -12,7 +12,7 @@ jobs:
       CLOUDSDK_COMPUTE_ZONE: us-west4-a 
       CONTAINER_NAME: sca-container
       IMAGE: sca-image
-      REG_ID: sca
+      REG_ID: sca-image
       REG_ID_PROD: sca-prod
       IMG_TAG: 0.1.0
       PROJECT_NAME: sca-project
